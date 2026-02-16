@@ -633,4 +633,4 @@ This project is created for QA automation testing purposes.
 
 ---
 
-Made with ❤️ for Quality Assurance
+Made with ❤️ for Insider One
