@@ -52,12 +52,9 @@ class CareersPage(BasePage):
 
     def click_software_development_block(self):
         """Click the Software Development link that navigates to Lever."""
-        # Wait for dynamic content to render
-        WebDriverWait(self.driver, 20).until(
-            EC.presence_of_element_located(self.SOFTWARE_DEV_LINK)
-        )
-
-        link = self.find_present(self.SOFTWARE_DEV_LINK, timeout=20)
+        # Team blocks load via AJAX after readyState is already "complete",
+        # so we use a longer timeout to account for the async rendering.
+        link = self.find_present(self.SOFTWARE_DEV_LINK, timeout=30)
 
         # Verify href is populated (content loads dynamically)
         WebDriverWait(self.driver, 20).until(
