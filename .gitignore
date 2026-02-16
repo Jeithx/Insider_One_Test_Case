@@ -1,0 +1,21 @@
+﻿# Python
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+
+# WebDriver Manager cache
+.wdm/
+
+# Screenshots
+screenshots/*.png
+!screenshots/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
